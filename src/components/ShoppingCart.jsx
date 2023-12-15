@@ -53,7 +53,6 @@ function ShoppingCart() {
               </tr>
             </thead>
             <tbody>
-              {console.log(cart)}
               {cart.map((item) => (
                 <tr key={item.product.id}>
                   <td>

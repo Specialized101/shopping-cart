@@ -6,3 +6,13 @@
   padding: 2rem;
   gap: 20px;
 }
+
+.home-content img {
+  width: 700px;
+}
+
+@media screen and (max-width: 800px) {
+  .home-content img {
+    width: 80%;
+  }
+}
