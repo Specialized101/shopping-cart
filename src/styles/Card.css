@@ -57,7 +57,7 @@
   background-color: #000;
   color: white;
 }
-
+                
 .increment:disabled,
 .decrement:disabled {
   opacity: 0.6;

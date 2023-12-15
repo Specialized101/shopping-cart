@@ -2,6 +2,7 @@ import React from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Home from './Home'
 import Shop from './Shop'
+import ShoppingCart from './ShoppingCart'
 import useProducts from '../hooks/useProducts'
 
 function Router() {
@@ -14,6 +15,10 @@ function Router() {
     {
       path: 'shop',
       element: <Shop data={data} error={error} loading={loading} />
+    },
+    {
+      path: 'shop/shopping-cart',
+      element: <ShoppingCart />
     }
   ])
 

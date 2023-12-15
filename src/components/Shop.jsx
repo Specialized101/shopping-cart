@@ -1,6 +1,7 @@
 /* eslint-disable react/jsx-no-bind */
 /* eslint-disable react/prop-types */
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import Card from './Card'
 import Navbar from './Navbar'
 import '../styles/Shop.css'
@@ -37,12 +38,10 @@ function Shop({ data, error, loading }) {
       {loading && <p>Loading...</p>}
       {error && <p>A network error occured</p>}
       <div className='cart-icon'>
-        <img className='cart-logo' src={Cart} alt='Shopping cart' />
+        <Link to='/shop/shopping-cart'><img className='cart-logo' src={Cart} alt='Shopping cart' /></Link>
         {cart.length > 0 && <div className='cart-count'>{cart.length}</div>}
       </div>
       <section className='products'>
-        {/* <button onClick={() => { setCart([]) }} type='button'>clear cart</button> */}
-        {console.log('Cart', cart)}
         {data && data.map((item) => <Card handleClick={addToCart} key={item.id} data={item} />)}
       </section>
     </>
